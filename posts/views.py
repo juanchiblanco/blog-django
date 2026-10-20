@@ -3,6 +3,7 @@ from .models import Post
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Post
 from .forms import PostForm
+from django.contrib.auth.decorators import login_required
 
 
 def inicio(request):
@@ -42,6 +43,7 @@ def detalle_post(request, post_id):
         {'post': post}
     )
 
+@login_required
 def crear_post(request):
 
     if request.method == 'POST':
@@ -68,6 +70,7 @@ def crear_post(request):
         {'form': form}
     )
 
+@login_required
 def editar_post(request, post_id):
 
     post = get_object_or_404(
@@ -103,6 +106,7 @@ def editar_post(request, post_id):
         {'form': form}
     )
 
+@login_required
 def eliminar_post(request, post_id):
 
     post = get_object_or_404(
