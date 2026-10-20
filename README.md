@@ -1,6 +1,6 @@
 # 📝 Blog Django
 
-Proyecto desarrollado en Python y Django como parte de las Preentregas 7 y 8.
+Proyecto desarrollado en Python y Django como parte de las Preentregas 7, 8 y 9.
 
 ## 📌 Descripción
 
