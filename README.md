@@ -1,28 +1,33 @@
-📝 Blog Django
+# 📝 Blog Django
 
-Proyecto desarrollado en Python y Django como parte de la Preentrega 7.
+Proyecto desarrollado en Python y Django como parte de las Preentregas 7 y 8.
 
-📌 Descripción
+## 📌 Descripción
 
-Este proyecto contiene la estructura inicial de una aplicación web para un blog desarrollada con Django.
+Este proyecto corresponde al desarrollo inicial de un blog utilizando Django.
 
-En esta etapa se prepara la base del proyecto para continuar incorporando las funcionalidades del blog en las próximas entregas.
+En esta etapa se implementó la primera versión visual del sitio, incorporando navegación entre páginas, templates reutilizables mediante herencia, vistas basadas en funciones y archivos estáticos para el diseño.
 
 El proyecto incluye:
 
-Proyecto Django blog_project.
+- Proyecto Django `blog_project`.
+- Aplicación `posts`.
+- Sistema de URLs del proyecto y de la aplicación.
+- Views basadas en funciones.
+- Templates HTML con herencia.
+- Página de inicio.
+- Página "Acerca de".
+- Archivos estáticos CSS.
+- Configuración de idioma en español.
+- Configuración de zona horaria de Argentina.
+- Archivo `.gitignore`.
+- Archivo `requirements.txt`.
 
-Aplicación posts.
+---
 
-Configuración de idioma en español.
+## 📂 Estructura del proyecto
 
-Configuración de zona horaria de Argentina.
-
-Archivo .gitignore.
-
-Archivo requirements.txt.
-
-📂 Estructura del proyecto
+```text
 blog_django/
 │
 ├── manage.py
@@ -42,62 +47,132 @@ blog_django/
     ├── admin.py
     ├── apps.py
     ├── migrations/
-    │   └── __init__.py
     ├── models.py
     ├── tests.py
-    └── views.py
+    ├── views.py
+    ├── urls.py
+    │
+    ├── templates/
+    │   └── posts/
+    │       ├── base.html
+    │       ├── inicio.html
+    │       └── acerca.html
+    │
+    └── static/
+        └── posts/
+            └── css/
+                └── estilos.css
+```
 
-🛠️ Tecnologías
+---
 
-Python 3
+## 🛠️ Tecnologías utilizadas
 
-Django
+- Python 3
+- Django
+- HTML5
+- CSS3
+- Git
+- GitHub
 
-Git
+---
 
-GitHub
+## ▶️ Instalación
 
-▶️ Instalación
-1. Clonar el repositorio
+### 1. Clonar el repositorio
+
+```bash
 git clone URL_DEL_REPOSITORIO
+```
 
-2. Ingresar a la carpeta del proyecto
+### 2. Ingresar a la carpeta del proyecto
+
+```bash
 cd blog_django
+```
 
-3. Crear el entorno virtual
+### 3. Crear un entorno virtual
+
+```bash
 python -m venv venv
+```
 
-4. Activar el entorno virtual
+### 4. Activar el entorno virtual
 
-En Windows PowerShell:
+#### Windows PowerShell
 
+```powershell
 .\venv\Scripts\Activate.ps1
+```
 
-5. Instalar las dependencias
+#### Git Bash
+
+```bash
+source venv/Scripts/activate
+```
+
+### 5. Instalar dependencias
+
+```bash
 pip install -r requirements.txt
+```
 
-🚀 Ejecutar el proyecto
+### 6. Aplicar migraciones
 
-Para iniciar el servidor de desarrollo:
+```bash
+python manage.py migrate
+```
 
+---
+
+## 🚀 Ejecutar el proyecto
+
+Iniciar el servidor de desarrollo:
+
+```bash
 python manage.py runserver
-
+```
 
 Luego abrir en el navegador:
 
+```text
 http://127.0.0.1:8000/
+```
 
-📦 Aplicación
+---
 
-La aplicación principal creada en esta etapa es:
+## 📦 Funcionalidades implementadas
 
-posts
+### Página de inicio
 
+Contiene:
 
-Esta aplicación será utilizada para desarrollar las funcionalidades relacionadas con las publicaciones del blog en las próximas etapas.
+- Título principal del blog.
+- Mensaje de bienvenida.
+- Descripción del proyecto.
 
-👨‍💻 Autor
+### Página "Acerca de"
 
-Juan Manuel Blanco
+Contiene:
 
-Proyecto realizado como parte de la formación en programación y desarrollo web.
+- Información del autor.
+- Objetivo del sitio.
+
+### Navegación
+
+El sitio cuenta con un menú para navegar entre:
+
+- Inicio
+- Acerca de
+
+### Diseño
+
+Se incorporó una hoja de estilos CSS para mejorar la presentación visual del sitio.
+
+---
+
+## 👨‍💻 Autor
+
+**Juan Manuel Blanco**
+
+Proyecto realizado como parte de la formación en programación y desarrollo web utilizando Python y Django.
