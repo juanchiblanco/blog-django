@@ -66,6 +66,27 @@ blog_django/
 
 ---
 
+## Panel de administración
+
+El proyecto utiliza el panel administrativo de Django para gestionar publicaciones.
+
+Acceso:
+
+http://127.0.0.1:8000/admin/
+
+Para acceder es necesario crear un superusuario mediante:
+
+```bash
+python manage.py createsuperuser
+```
+
+Desde el panel es posible:
+
+- Crear publicaciones.
+- Editar publicaciones.
+- Eliminar publicaciones.
+- Gestionar el estado de cada publicación.
+
 ## 🛠️ Tecnologías utilizadas
 
 - Python 3

@@ -1,0 +1,32 @@
+{% extends 'posts/base.html' %}
+
+{% block content %}
+
+<h2>Listado de publicaciones</h2>
+
+{% for post in posts %}
+
+<article>
+    <h3>{{ post.titulo }}</h3>
+
+    <p>{{ post.contenido }}</p>
+
+    <small>
+        Autor: {{ post.autor }}
+        |
+        Estado: {{ post.estado }}
+        |
+        Fecha: {{ post.fecha_creacion }}
+    </small>
+
+    <hr>
+
+</article>
+
+{% empty %}
+
+<p>No existen publicaciones.</p>
+
+{% endfor %}
+
+{% endblock %}
