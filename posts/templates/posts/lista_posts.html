@@ -2,22 +2,31 @@
 
 {% block content %}
 
+<a href="{% url 'crear_post' %}">
+    Crear nuevo post
+</a>
+
 <h2>Listado de publicaciones</h2>
 
 {% for post in posts %}
 
 <article>
-    <h3>{{ post.titulo }}</h3>
 
-    <p>{{ post.contenido }}</p>
+    <h3>
+        <a href="{% url 'detalle_post' post.id %}">
+            {{ post.titulo }}
+        </a>
+    </h3>
 
-    <small>
-        Autor: {{ post.autor }}
-        |
-        Estado: {{ post.estado }}
-        |
-        Fecha: {{ post.fecha_creacion }}
-    </small>
+    <p>{{ post.contenido|truncatewords:20 }}</p>
+
+    {% if post.imagen %}
+        <img
+            src="{{ post.imagen.url }}"
+            alt="{{ post.titulo }}"
+            width="300"
+        >
+    {% endif %}
 
     <hr>
 
